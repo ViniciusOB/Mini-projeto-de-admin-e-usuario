@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS sistema;
+
+USE sistema;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    admin TINYINT(1) NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS informacoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL
+);
+
+INSERT INTO usuarios (nome, email, senha, admin) VALUES
+    ('Admin', 'admin@example.com', 'senha_admin', 1),
+    ('Usuário Comum', 'usuario@example.com', 'senha_usuario', 0);
+
+INSERT INTO informacoes (titulo, descricao) VALUES
+    ('Informação 1', 'Descrição da informação 1.'),
+    ('Informação 2', 'Descrição da informação 2.');

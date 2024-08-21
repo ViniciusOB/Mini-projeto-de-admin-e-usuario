@@ -1,0 +1,9 @@
+{
+    "name": "usuario/projeto-crud",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\ProjetoCrud\\": "src/"
+        }
+    },
+    "require": {}
+}
